@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     
-    <!-- ↓↓↓ 【重要】下の "" の中に、Googleサーチコンソールの合言葉を貼り付けてください ↓↓↓ -->
+    <!-- ↓↓↓ 【重要】先ほど取得したGoogleの合言葉を、下の "" の中に貼り直してください ↓↓↓ -->
     <meta name="google-site-verification" content="Aqe53NS0R6gmAh_Cy2OyxAWglv8lQ68ZFykyi2-1V6I" />
     <!-- ↑↑↑ ここまで ↑↑↑ -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags (検索エンジン向け設定) -->
+    <!-- SEO Meta Tags -->
     <title>白金の深層強圧リンパ＆組織間リリース | Private Salon Chianty</title>
-    <meta name="description" content="東京・白金の男性セラピストによるプライベートサロンChianty（シャンティ）。歴10年の「深層強圧リンパ」と「組織間リリース」で、自律神経×痩身×不調改善を同時に叶えます。恵比寿・広尾からもアクセス良好。">
-    <meta name="keywords" content="白金,リンパマッサージ,強圧,男性セラピスト,組織間リリース,痩身,小顔,恵比寿,広尾,港区">
+    <meta name="description" content="東京・白金の男性セラピストによるプライベートサロンChianty（シャンティ）。歴10年の「深層強圧リンパ」と「組織間リリース」で、自律神経×痩身×不調改善を同時に叶えます。">
+    <meta name="keywords" content="白金,リンパマッサージ,強圧,男性セラピスト,組織間リリース,痩身,小顔,恵比寿,広尾">
     
-    <!-- OGP (SNSシェア時の表示設定) -->
+    <!-- OGP -->
     <meta property="og:title" content="白金の深層強圧リンパ | Private Salon Chianty">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chianty-website.vercel.app/">
@@ -22,9 +22,8 @@
     <meta property="og:description" content="貴女の努力の、最終地点。マニュアルを否定する職人の手技で、深層から身体を変えます。">
     <meta property="og:site_name" content="Private Salon Chianty">
     <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicon (ブラウザタブのアイコン設定) -->
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚜️</text></svg>">
 
     <!-- Design & Fonts -->
@@ -58,14 +57,14 @@
         }
     </script>
 
-    <!-- MEO対策：構造化データ (JSON-LD) -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "name": "Private Salon Chianty",
       "image": "chiantytop.jpg",
-      "description": "白金の深層強圧リンパ＆組織間リリース専門サロン。男性セラピストによる職人技で根本改善。",
+      "description": "白金の深層強圧リンパ＆組織間リリース専門サロン。",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "白金5-13-10 グランパレス白金001号室",
@@ -83,15 +82,7 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
           "opens": "10:00",
           "closes": "22:00"
         }
@@ -105,6 +96,12 @@
         .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(20px); }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         html { scroll-behavior: smooth; }
+        
+        /* Q&A Accordion Style */
+        .accordion-content { transition: max-height 0.3s ease-out, opacity 0.3s ease-out; max-height: 0; opacity: 0; overflow: hidden; }
+        .accordion-content.active { max-height: 500px; opacity: 1; }
+        .accordion-icon { transition: transform 0.3s ease; }
+        .accordion-icon.active { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-white text-gray-800 leading-relaxed">
@@ -116,7 +113,7 @@
             <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
                 <a href="#concept" class="hover:text-gold-600 transition">CONCEPT</a>
                 <a href="#menu" class="hover:text-gold-600 transition">MENU</a>
-                <a href="#system" class="hover:text-gold-600 transition">SYSTEM</a>
+                <a href="#voice" class="hover:text-gold-600 transition">VOICE</a>
                 <a href="#profile" class="hover:text-gold-600 transition">THERAPIST</a>
                 <a href="#access" class="hover:text-gold-600 transition">ACCESS</a>
             </nav>
@@ -130,16 +127,10 @@
             <img src="chiantytop.jpg" alt="白金のプライベートサロンChianty 店内風景" class="w-full h-full object-cover opacity-80" onerror="this.style.display='none';this.parentElement.style.backgroundColor='#ccc'">
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
-        
         <div class="relative z-10 text-center text-white p-6 fade-in-up">
             <p class="text-sm md:text-base tracking-[0.3em] mb-4">白金・職人街の隠れ家</p>
-            <h1 class="text-4xl md:text-6xl font-serif font-medium mb-6 leading-tight">
-                貴女の努力の、<br>最終地点。
-            </h1>
-            <p class="text-sm md:text-lg font-light tracking-widest mb-10 text-gray-200">
-                深層強圧リンパ × 組織間リリース<br>
-                マニュアルを否定する、職人の手技。
-            </p>
+            <h1 class="text-4xl md:text-6xl font-serif font-medium mb-6 leading-tight">貴女の努力の、<br>最終地点。</h1>
+            <p class="text-sm md:text-lg font-light tracking-widest mb-10 text-gray-200">深層強圧リンパ × 組織間リリース<br>マニュアルを否定する、職人の手技。</p>
             <a href="https://beauty.hotpepper.jp/kr/slnH000500729/coupon/" target="_blank" rel="noopener noreferrer" class="inline-block border border-white px-8 py-4 text-sm tracking-widest hover:bg-white hover:text-dark transition duration-300">ご予約はこちら</a>
         </div>
     </section>
@@ -147,22 +138,9 @@
     <!-- Introduction -->
     <section class="py-20 md:py-32 bg-white text-center">
         <div class="container mx-auto px-6 max-w-2xl">
-            <h2 class="text-2xl md:text-3xl font-serif mb-12 text-dark">
-                どこに行っても満足できなかった<br>
-                貴女へ。
-            </h2>
-            <p class="text-gray-600 mb-8">
-                「強圧と言われたけれど、物足りなかった」<br>
-                「その場は良くても、すぐに戻ってしまう」<br>
-                「痩身エステに通ったけれど、結果が出ない」
-            </p>
-            <p class="text-gray-600">
-                それは、貴女の身体が悪いのではありません。<br>
-                アプローチの「深さ」と「密度」が足りていないだけです。<br><br>
-                Chiantyは、表面を撫でるだけの施術は一切行いません。<br>
-                筋肉の繊維、その奥深くまで埋め尽くすような圧で、<br>
-                貴女の身体を根本からリセットします。
-            </p>
+            <h2 class="text-2xl md:text-3xl font-serif mb-12 text-dark">どこに行っても満足できなかった<br>貴女へ。</h2>
+            <p class="text-gray-600 mb-8">「強圧と言われたけれど、物足りなかった」<br>「その場は良くても、すぐに戻ってしまう」<br>「痩身エステに通ったけれど、結果が出ない」</p>
+            <p class="text-gray-600">それは、貴女の身体が悪いのではありません。<br>アプローチの「深さ」と「密度」が足りていないだけです。<br><br>Chiantyは、表面を撫でるだけの施術は一切行いません。<br>筋肉の繊維、その奥深くまで埋め尽くすような圧で、<br>貴女の身体を根本からリセットします。</p>
         </div>
     </section>
 
@@ -177,14 +155,7 @@
                 <div class="w-full md:w-1/2">
                     <span class="text-gold-600 text-xs font-bold tracking-widest block mb-2">CORE TECHNIQUE</span>
                     <h3 class="text-2xl font-serif mb-6">10年の歳月が証明する、<br>圧倒的な「深層強圧」リンパ。</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-7">
-                        リンパマッサージ歴10年。<br>
-                        数千人の身体と向き合い、辿り着いたのは「撫でるだけでは流れない」という事実でした。<br><br>
-                        男性セラピスト特有の大きく温かい手と、体重を乗せた持続的な圧。<br>
-                        深層の筋肉まで捉え、滞った老廃物を物理的に押し流す。<br>
-                        「痛いけれど、効いている」「こんなに深く入られたのは初めて」<br>
-                        そう言っていただける、Chiantyの原点にして頂点の技術です。
-                    </p>
+                    <p class="text-gray-600 mb-6 text-sm leading-7">リンパマッサージ歴10年。<br>数千人の身体と向き合い、辿り着いたのは「撫でるだけでは流れない」という事実でした。<br><br>男性セラピスト特有の大きく温かい手と、体重を乗せた持続的な圧。<br>深層の筋肉まで捉え、滞った老廃物を物理的に押し流す。<br>「痛いけれど、効いている」「こんなに深く入られたのは初めて」<br>そう言っていただける、Chiantyの原点にして頂点の技術です。</p>
                 </div>
             </div>
         </div>
@@ -201,103 +172,108 @@
                 <div class="w-full md:w-1/2">
                     <span class="text-gold-600 text-xs font-bold tracking-widest block mb-2">SECOND WEAPON</span>
                     <h3 class="text-2xl font-serif mb-6">それでも届かないコリへ。<br>「組織間リリース」という解答。</h3>
-                    <p class="text-gray-600 mb-6 text-sm leading-7">
-                        どれだけ強く押しても、緩まない箇所がある。<br>
-                        その原因は、筋肉と筋肉、皮膚と筋肉の間の「癒着」にありました。<br><br>
-                        リンパマッサージだけでは解決できない頑固な癒着を、<br>
-                        指先だけの繊細な技術で一枚一枚、丁寧に剥がしていく。<br>
-                        「埋もれた鎖骨の発掘」「首の長さの復活」。<br>
-                        強さだけではない、緻密な計算が美しさを引き出します。
-                    </p>
+                    <p class="text-gray-600 mb-6 text-sm leading-7">どれだけ強く押しても、緩まない箇所がある。<br>その原因は、筋肉と筋肉、皮膚と筋肉の間の「癒着」にありました。<br><br>リンパマッサージだけでは解決できない頑固な癒着を、<br>指先だけの繊細な技術で一枚一枚、丁寧に剥がしていく。<br>「埋もれた鎖骨の発掘」「首の長さの復活」。<br>強さだけではない、緻密な計算が美しさを引き出します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Voice Section (New!) -->
+    <section id="voice" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <span class="text-gold-600 text-sm tracking-widest">CUSTOMER VOICE</span>
+                <h2 class="text-3xl font-serif mt-2 mb-4">お客様の声</h2>
+                <p class="text-xs text-gray-500">ホットペッパービューティーより抜粋</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Voice 1 -->
+                <div class="bg-white p-8 shadow-sm border-t-4 border-gold-400 relative">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3"><i class="fas fa-user"></i></div>
+                        <div><p class="text-sm font-bold">30代 女性</p><p class="text-xs text-gray-400">会社員</p></div>
+                    </div>
+                    <div class="mb-4 text-gold-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm mb-3">「やっと出会えました」</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">強めの圧が好きなのですが、どこに行っても物足りず…。ここは本当に「深層」まで届いている感覚があり、終わった後の軽さが別格でした。男性セラピストならではの大きな手も安心感があります。</p>
+                </div>
+
+                <!-- Voice 2 -->
+                <div class="bg-white p-8 shadow-sm border-t-4 border-gold-400 relative">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3"><i class="fas fa-user"></i></div>
+                        <div><p class="text-sm font-bold">40代 女性</p><p class="text-xs text-gray-400">主婦</p></div>
+                    </div>
+                    <div class="mb-4 text-gold-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm mb-3">「埋もれた鎖骨が出ました」</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">組織間リリースというのを初めて受けましたが、癒着を剥がす感覚が新鮮でした。施術後、鏡を見て首が長くなっていたのに驚き！ブライダル前にもっと早く知りたかったです。</p>
+                </div>
+
+                <!-- Voice 3 -->
+                <div class="bg-white p-8 shadow-sm border-t-4 border-gold-400 relative">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3"><i class="fas fa-user"></i></div>
+                        <div><p class="text-sm font-bold">50代 女性</p><p class="text-xs text-gray-400">経営者</p></div>
+                    </div>
+                    <div class="mb-4 text-gold-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm mb-3">「月に一度の救世主」</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed">職人気質で無駄な会話がなく、施術に集中してくれるのが心地よいです。マニュアル通りではない、その日の身体に合わせた施術をしてくれるので、完全に信頼してお任せしています。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 bg-gray-50">
+    <section id="menu" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-16">
                 <span class="text-gold-600 text-sm tracking-widest">FIRST TRIAL MENU</span>
                 <h2 class="text-3xl font-serif mt-2 mb-4">初回限定メニュー</h2>
-                <p class="text-xs text-gray-500 leading-relaxed">
-                    Chiantyの技術を初めてご体感いただくための特別なプランです。<br>
-                    <span class="font-bold text-gray-700">「贅沢に全身を変える」</span>か<span class="font-bold text-gray-700">「まずは気軽に試す」</span>か。<br>
-                    お客様の目的に合わせてお選びください。
-                </p>
+                <p class="text-xs text-gray-500 leading-relaxed">Chiantyの技術を初めてご体感いただくための特別なプランです。<br><span class="font-bold text-gray-700">「贅沢に全身を変える」</span>か<span class="font-bold text-gray-700">「まずは気軽に試す」</span>か。<br>お客様の目的に合わせてお選びください。</p>
             </div>
 
             <!-- Two Main Choices -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-stretch">
-                
                 <!-- 1. Luxury Full Course -->
                 <div class="bg-white p-8 border-2 border-gold-400 relative shadow-xl flex flex-col transform md:-translate-y-2 group hover:-translate-y-3 transition duration-300">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold-400 text-white px-6 py-1 text-xs tracking-widest shadow-md font-bold">
-                        PREMIUM
-                    </div>
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold-400 text-white px-6 py-1 text-xs tracking-widest shadow-md font-bold">PREMIUM</div>
                     <div class="mb-4 text-center">
                         <h3 class="text-xl font-bold text-gray-900">BODY ＋ FACIAL フルコース</h3>
                         <p class="text-sm text-gold-600 font-bold mt-1">自律神経×痩身×小顔｜全てを叶える本命</p>
                     </div>
-                    
                     <div class="flex-grow flex items-center justify-center my-4">
                          <div class="w-full h-40 bg-gray-100 overflow-hidden relative">
                             <img src="chianty_web_38.jpg" alt="フルコース施術イメージ" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400?text=Premium+Course';">
                          </div>
                     </div>
-
                     <div class="flex justify-center items-baseline border-b border-gray-200 pb-4 mb-6">
                         <span class="text-sm font-medium mr-4">130分</span>
-                        <div class="text-right">
-                            <span class="text-xs text-gray-400 line-through mr-2">通常 ¥18,000</span>
-                            <span class="text-4xl font-serif text-dark">¥15,000</span>
-                        </div>
+                        <div class="text-right"><span class="text-xs text-gray-400 line-through mr-2">通常 ¥18,000</span><span class="text-4xl font-serif text-dark">¥15,000</span></div>
                     </div>
                     <ul class="text-sm text-gray-600 space-y-3 list-disc list-inside bg-gray-50 p-4 rounded mb-6">
-                        <li>深層強圧リンパ（全身）</li>
-                        <li>組織間リリース（首・鎖骨）</li>
-                        <li>小顔フェイシャル</li>
-                        <li>ヘッドスパ</li>
+                        <li>深層強圧リンパ（全身）</li><li>組織間リリース（首・鎖骨）</li><li>小顔フェイシャル</li><li>ヘッドスパ</li>
                     </ul>
-                    <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500729&couponId=CP00000006401295&add=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-dark text-white text-center py-3 text-sm tracking-widest hover:bg-gold-600 transition">
-                        このコースを予約
-                    </a>
+                    <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500729&couponId=CP00000006401295&add=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-dark text-white text-center py-3 text-sm tracking-widest hover:bg-gold-600 transition">このコースを予約</a>
                 </div>
 
                 <!-- 2. Casual Entry Choice -->
                 <div class="bg-white p-8 border border-gray-200 relative shadow-sm flex flex-col group hover:shadow-lg transition duration-300">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-600 text-white px-6 py-1 text-xs tracking-widest shadow-sm">
-                        CASUAL
-                    </div>
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-600 text-white px-6 py-1 text-xs tracking-widest shadow-sm">CASUAL</div>
                     <div class="mb-4 text-center">
                         <h3 class="text-xl font-bold text-gray-800">選べる集中ケア（悩み別）</h3>
                         <p class="text-sm text-gray-500 mt-1">「まずは試したい」貴女へ。手軽な入り口。</p>
                     </div>
-
                     <div class="flex-grow flex flex-col justify-center my-4 space-y-2">
-                         <div class="w-full py-3 bg-gray-50 text-center text-sm border border-gray-100 rounded">
-                             <span class="font-bold text-gray-700">上半身 集中</span> 60分
-                         </div>
-                         <div class="w-full py-3 bg-gray-50 text-center text-sm border border-gray-100 rounded">
-                             <span class="font-bold text-gray-700">下半身 集中</span> 60分
-                         </div>
-                         <div class="w-full py-3 bg-gray-50 text-center text-sm border border-gray-100 rounded">
-                             <span class="font-bold text-gray-700">小顔フェイシャル</span> 45分
-                         </div>
+                         <div class="w-full py-3 bg-gray-50 text-center text-sm border border-gray-100 rounded"><span class="font-bold text-gray-700">上半身 集中</span> 60分</div>
+                         <div class="w-full py-3 bg-gray-50 text-center text-sm border border-gray-100 rounded"><span class="font-bold text-gray-700">下半身 集中</span> 60分</div>
+                         <div class="w-full py-3 bg-gray-50 text-center text-sm border border-gray-100 rounded"><span class="font-bold text-gray-700">小顔フェイシャル</span> 45分</div>
                     </div>
-
                     <div class="flex justify-center items-baseline border-b border-gray-200 pb-4 mb-6">
-                        <div class="text-right">
-                             <span class="text-xs text-gray-400 line-through mr-2">通常 ¥11,000</span>
-                             <span class="text-4xl font-serif text-dark">¥8,800</span>
-                        </div>
+                        <div class="text-right"><span class="text-xs text-gray-400 line-through mr-2">通常 ¥11,000</span><span class="text-4xl font-serif text-dark">¥8,800</span></div>
                     </div>
-                    <p class="text-sm text-gray-500 text-center mb-6">
-                        当日、カウンセリングでお悩みをお聞きし、<br>上記3つの中から最適な一つをお選びいただけます。
-                    </p>
-                    <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500729&couponId=CP00000012259239&add=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-white border border-dark text-dark text-center py-3 text-sm tracking-widest hover:bg-gray-100 transition">
-                        このコースを予約
-                    </a>
+                    <p class="text-sm text-gray-500 text-center mb-6">当日、カウンセリングでお悩みをお聞きし、<br>上記3つの中から最適な一つをお選びいただけます。</p>
+                    <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500729&couponId=CP00000012259239&add=0" target="_blank" rel="noopener noreferrer" class="block w-full bg-white border border-dark text-dark text-center py-3 text-sm tracking-widest hover:bg-gray-100 transition">このコースを予約</a>
                 </div>
             </div>
 
@@ -307,65 +283,103 @@
                     <span class="bg-gray-50 px-4 relative z-10">その他の初回限定メニュー</span>
                     <span class="absolute top-1/2 left-0 w-full h-px bg-gray-200 -z-0"></span>
                 </h4>
-                
                 <div class="bg-white border border-gray-100 rounded-sm shadow-sm divide-y divide-gray-100">
                     <div class="p-4 md:p-6 flex flex-col md:flex-row justify-between items-center md:items-baseline hover:bg-gray-50 transition">
-                        <div class="mb-2 md:mb-0 text-center md:text-left">
-                            <h5 class="font-bold text-gray-800">深層強圧 BODY 110分</h5>
-                            <p class="text-xs text-gray-500">男性独自の「深さ」を全身で堪能する看板メニュー</p>
-                        </div>
-                        <div class="flex items-baseline">
-                            <span class="text-xs text-gray-400 line-through mr-2">通常 ¥16,000</span>
-                            <span class="font-serif text-lg text-dark">¥12,800</span>
-                        </div>
+                        <div class="mb-2 md:mb-0 text-center md:text-left"><h5 class="font-bold text-gray-800">深層強圧 BODY 110分</h5><p class="text-xs text-gray-500">男性独自の「深さ」を全身で堪能する看板メニュー</p></div>
+                        <div class="flex items-baseline"><span class="text-xs text-gray-400 line-through mr-2">通常 ¥16,000</span><span class="font-serif text-lg text-dark">¥12,800</span></div>
                     </div>
-
                     <div class="p-4 md:p-6 flex flex-col md:flex-row justify-between items-center md:items-baseline hover:bg-gray-50 transition">
-                        <div class="mb-2 md:mb-0 text-center md:text-left">
-                            <h5 class="font-bold text-gray-800">深層組織剥がし＆顔 60分</h5>
-                            <p class="text-xs text-gray-500">埋もれた鎖骨・首の長さを発掘する独自技術</p>
-                        </div>
-                        <div class="flex items-baseline">
-                            <span class="text-xs text-gray-400 line-through mr-2">通常 ¥13,000</span>
-                            <span class="font-serif text-lg text-dark">¥11,000</span>
-                        </div>
+                        <div class="mb-2 md:mb-0 text-center md:text-left"><h5 class="font-bold text-gray-800">深層組織剥がし＆顔 60分</h5><p class="text-xs text-gray-500">埋もれた鎖骨・首の長さを発掘する独自技術</p></div>
+                        <div class="flex items-baseline"><span class="text-xs text-gray-400 line-through mr-2">通常 ¥13,000</span><span class="font-serif text-lg text-dark">¥11,000</span></div>
                     </div>
                 </div>
             </div>
             
             <div class="mt-12 text-center">
-                <a href="https://beauty.hotpepper.jp/kr/slnH000500729/coupon/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gold-600 text-white px-12 py-4 text-sm tracking-widest hover:bg-gold-500 transition duration-300 shadow-lg font-bold">
-                    ホットペッパーで予約する
-                </a>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000500729/coupon/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gold-600 text-white px-12 py-4 text-sm tracking-widest hover:bg-gold-500 transition duration-300 shadow-lg font-bold">ホットペッパーで予約する</a>
                 <p class="text-xs text-gray-500 mt-4">※空き状況は予約サイトにてご確認ください</p>
             </div>
         </div>
     </section>
 
+    <!-- Q&A Section (New!) -->
+    <section class="py-20 bg-greige">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-16">
+                <span class="text-gold-600 text-sm tracking-widest">Q&A</span>
+                <h2 class="text-2xl font-serif mt-2 mb-4">よくあるご質問</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-sm text-gray-800">Q. かなり痛いですか？ 揉み返しはありますか？</span>
+                        <i class="fas fa-chevron-down text-gray-400 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                        <div class="px-6 py-4 text-xs text-gray-600 leading-relaxed border-t border-gray-100">
+                            A. 深層部までアプローチするため、滞っている箇所は痛みを感じる場合がありますが、お客様の呼吸に合わせて圧を調整しますのでご安心ください。「イタ気持ちいい」範囲で施術します。揉み返しについては、筋肉繊維に沿って圧をかけるため起こりにくいですが、好転反応として一時的にダルさが出ることはあります。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-sm text-gray-800">Q. 男性セラピストに抵抗があるのですが…</span>
+                        <i class="fas fa-chevron-down text-gray-400 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                        <div class="px-6 py-4 text-xs text-gray-600 leading-relaxed border-t border-gray-100">
+                            A. 初めての方は皆様そう仰いますが、施術が始まると「手が大きくて安心感がある」「圧が安定していて心地よい」とリラックスされる方がほとんどです。タオルワーク（肌の露出管理）も徹底しておりますので、安心して身を委ねてください。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-sm text-gray-800">Q. 何か持っていくものはありますか？</span>
+                        <i class="fas fa-chevron-down text-gray-400 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                        <div class="px-6 py-4 text-xs text-gray-600 leading-relaxed border-t border-gray-100">
+                            A. お着替え（紙ショーツ等）は全てご用意しておりますので、手ぶらでお越しください。メイクスペースもございますので、お出かけ前でも大丈夫です。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-sm text-gray-800">Q. クレジットカードは使えますか？</span>
+                        <i class="fas fa-chevron-down text-gray-400 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50">
+                        <div class="px-6 py-4 text-xs text-gray-600 leading-relaxed border-t border-gray-100">
+                            A. はい、各種クレジットカード（VISA, Master, JCB, AMEX, Diners）のほか、PayPayや交通系ICなどもご利用いただけます。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Membership System (4 Columns: Time Order) -->
-    <section id="system" class="py-20 bg-greige">
+    <section id="system" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-6xl"> 
             <div class="text-center mb-16">
                 <span class="text-gold-600 text-sm tracking-widest">MEMBERSHIP SYSTEM</span>
                 <h2 class="text-2xl font-serif mt-2 mb-6">2回目以降の料金について</h2>
-                
                 <div class="bg-white p-8 md:p-10 text-left border-l-4 border-gold-400 shadow-sm max-w-3xl mx-auto mb-12">
                     <h3 class="text-xl font-bold text-gray-800 mb-4 font-serif">美しさの発掘は、「化石の発掘」と同じです。</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                        施術をしてから時間が経つと、身体にはまた老廃物という「土」が溜まってしまいます。<br>
-                        本来の美しいライン（化石）を完全に発掘するためには、<br>
-                        土が戻って埋もれてしまう前に、掘り進めなければなりません。
-                    </p>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Chiantyは、<span class="font-bold underline">通えば通うほどお得になる料金システム</span>を採用し、<br>
-                        貴女の「変わりたい」という決意をサポートします。
-                    </p>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">施術をしてから時間が経つと、身体にはまた老廃物という「土」が溜まってしまいます。<br>本来の美しいライン（化石）を完全に発掘するためには、<br>土が戻って埋もれてしまう前に、掘り進めなければなりません。</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Chiantyは、<span class="font-bold underline">通えば通うほどお得になる料金システム</span>を採用し、<br>貴女の「変わりたい」という決意をサポートします。</p>
                 </div>
             </div>
-
-            <div class="bg-white p-6 md:p-10 shadow-sm rounded-sm">
+            <div class="bg-white p-6 md:p-10 shadow-sm rounded-sm border border-gray-100">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-stretch">
-                    
                     <!-- 1. Within 10 Days -->
                     <div class="text-center flex flex-col">
                         <div class="border-2 border-gold-600 p-6 h-full flex flex-col justify-center bg-gradient-to-br from-white to-gold-100 relative shadow-lg transform scale-105 md:scale-105 z-10">
@@ -376,7 +390,6 @@
                             <p class="text-[10px] text-gray-600">メンテナンスに最適</p>
                         </div>
                     </div>
-
                     <!-- 2. Within 20 Days -->
                     <div class="text-center flex flex-col">
                         <div class="border-2 border-gold-400 p-6 h-full flex flex-col justify-center bg-gold-50/30 relative">
@@ -387,7 +400,6 @@
                             <p class="text-[10px] text-gray-500">短期集中ケアに</p>
                         </div>
                     </div>
-
                     <!-- 3. Member Price -->
                     <div class="text-center flex flex-col">
                         <div class="border border-gold-200 p-6 h-full flex flex-col justify-center bg-white relative">
@@ -396,7 +408,6 @@
                             <p class="text-xs text-gray-500">2ヶ月以内のご来店</p>
                         </div>
                     </div>
-
                     <!-- 4. Regular Price -->
                     <div class="text-center opacity-70 flex flex-col">
                         <div class="border border-gray-300 p-6 h-full flex flex-col justify-center bg-gray-50">
@@ -406,23 +417,14 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="hidden md:flex justify-between px-20 mt-2 text-gold-400 text-xl">
-                    <i class="fas fa-arrow-right"></i>
-                    <i class="fas fa-arrow-right"></i>
-                    <i class="fas fa-arrow-right"></i>
-                    <span></span>
-                </div>
-
-                <p class="text-xs text-center text-gray-400 mt-8">
-                    ※各価格の詳細は、ご来店時に詳しくご案内させていただきます。
-                </p>
+                <div class="hidden md:flex justify-between px-20 mt-2 text-gold-400 text-xl"><i class="fas fa-arrow-right"></i><i class="fas fa-arrow-right"></i><i class="fas fa-arrow-right"></i><span></span></div>
+                <p class="text-xs text-center text-gray-400 mt-8">※各価格の詳細は、ご来店時に詳しくご案内させていただきます。</p>
             </div>
         </div>
     </section>
 
     <!-- Profile -->
-    <section id="profile" class="py-20 bg-white">
+    <section id="profile" class="py-20 bg-greige">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/3">
@@ -433,65 +435,33 @@
                 <div class="w-full md:w-2/3">
                     <h2 class="text-2xl font-serif mb-2">Owner Therapist</h2>
                     <p class="text-sm text-gold-600 font-bold mb-6 tracking-widest">職人気質の男性セラピスト</p>
-                    <p class="text-gray-600 leading-relaxed mb-6 text-sm">
-                        リンパマッサージの世界に入り10年。<br>
-                        これまで多くのお客様の身体に触れる中で、確信したことがあります。<br>
-                        それは、「マニュアル通りの施術では、本当の疲れは取れない」ということです。<br><br>
-                        筋肉の付き方、骨格、コリの深さは千差万別。<br>
-                        だからこそ、私はマニュアルを捨てました。<br>
-                        その日の貴女の筋肉繊維一本一本と対話し、指先の感覚だけで、最適な圧と角度を探り当てます。<br><br>
-                        男性ならではの力強さと、職人としての繊細さ。<br>
-                        この二つを兼ね備えた「Chianty」だけの施術を、ぜひ体感してください。
-                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-sm">リンパマッサージの世界に入り10年。<br>これまで多くのお客様の身体に触れる中で、確信したことがあります。<br>それは、「マニュアル通りの施術では、本当の疲れは取れない」ということです。<br><br>筋肉の付き方、骨格、コリの深さは千差万別。<br>だからこそ、私はマニュアルを捨てました。<br>その日の貴女の筋肉繊維一本一本と対話し、指先の感覚だけで、最適な圧と角度を探り当てます。<br><br>男性ならではの力強さと、職人としての繊細さ。<br>この二つを兼ね備えた「Chianty」だけの施術を、ぜひ体感してください。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Access & Info -->
-    <section id="access" class="py-20 bg-greige">
+    <section id="access" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12">
                 <h2 class="text-2xl font-serif">Salon Information</h2>
             </div>
-            <div class="bg-white p-8 shadow-sm flex flex-col md:flex-row gap-8">
+            <div class="bg-white p-8 shadow-sm flex flex-col md:flex-row gap-8 border border-gray-100">
                 <div class="w-full md:w-1/2">
                     <dl class="space-y-4 text-sm">
-                        <div class="flex border-b border-gray-100 pb-2">
-                            <dt class="w-24 font-bold text-gray-500">店名</dt>
-                            <dd>Private Salon Chianty（シャンティ）</dd>
-                        </div>
-                        <div class="flex border-b border-gray-100 pb-2">
-                            <dt class="w-24 font-bold text-gray-500">住所</dt>
-                            <dd>東京都港区白金5-13-10<br>グランパレス白金001号室</dd>
-                        </div>
+                        <div class="flex border-b border-gray-100 pb-2"><dt class="w-24 font-bold text-gray-500">店名</dt><dd>Private Salon Chianty（シャンティ）</dd></div>
+                        <div class="flex border-b border-gray-100 pb-2"><dt class="w-24 font-bold text-gray-500">住所</dt><dd>東京都港区白金5-13-10<br>グランパレス白金001号室</dd></div>
                         <div class="flex border-b border-gray-100 pb-2">
                             <dt class="w-24 font-bold text-gray-500 self-start mt-1">アクセス</dt>
                             <dd>
-                                <div class="mb-3">
-                                    <span class="font-bold text-gold-600"><i class="fas fa-bus mr-1"></i>最寄り：都営バス「恵比寿三丁目」徒歩2分</span><br>
-                                    <span class="text-xs text-gray-400">（渋谷駅・恵比寿駅・田町駅よりバス便多数あり）</span>
-                                </div>
-                                <ul class="space-y-1 text-sm">
-                                    <li>日比谷線 <strong>広尾駅</strong> 徒歩10分</li>
-                                    <li>南北線・三田線 <strong>白金高輪駅</strong> 徒歩12分</li>
-                                    <li>南北線・三田線 <strong>白金台駅</strong> 徒歩13分</li>
-                                    <li>JR・日比谷線 <strong>恵比寿駅</strong> 徒歩15分</li>
-                                </ul>
+                                <div class="mb-3"><span class="font-bold text-gold-600"><i class="fas fa-bus mr-1"></i>最寄り：都営バス「恵比寿三丁目」徒歩2分</span><br><span class="text-xs text-gray-400">（渋谷駅・恵比寿駅・田町駅よりバス便多数あり）</span></div>
+                                <ul class="space-y-1 text-sm"><li>日比谷線 <strong>広尾駅</strong> 徒歩10分</li><li>南北線・三田線 <strong>白金高輪駅</strong> 徒歩12分</li><li>南北線・三田線 <strong>白金台駅</strong> 徒歩13分</li><li>JR・日比谷線 <strong>恵比寿駅</strong> 徒歩15分</li></ul>
                             </dd>
                         </div>
-                        <div class="flex border-b border-gray-100 pb-2">
-                            <dt class="w-24 font-bold text-gray-500">営業時間</dt>
-                            <dd>10:00 - 22:00（最終受付 20:00）</dd>
-                        </div>
-                        <div class="flex border-b border-gray-100 pb-2">
-                            <dt class="w-24 font-bold text-gray-500">定休日</dt>
-                            <dd>不定休</dd>
-                        </div>
-                        <div class="flex border-b border-gray-100 pb-2">
-                            <dt class="w-24 font-bold text-gray-500">支払い</dt>
-                            <dd>現金 / クレジットカード（VISA, Master, JCB, Amex, Diners）/ 交通系IC / PayPay / iD / QUICPay / Apple Pay 等</dd>
-                        </div>
+                        <div class="flex border-b border-gray-100 pb-2"><dt class="w-24 font-bold text-gray-500">営業時間</dt><dd>10:00 - 22:00（最終受付 20:00）</dd></div>
+                        <div class="flex border-b border-gray-100 pb-2"><dt class="w-24 font-bold text-gray-500">定休日</dt><dd>不定休</dd></div>
+                        <div class="flex border-b border-gray-100 pb-2"><dt class="w-24 font-bold text-gray-500">支払い</dt><dd>現金 / クレジットカード / 交通系IC / PayPay 等</dd></div>
                     </dl>
                 </div>
                 <div class="w-full md:w-1/2 h-64 bg-gray-200 relative">
@@ -510,10 +480,17 @@
 
     <!-- Mobile Button -->
     <div class="fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 md:hidden z-50 flex justify-center shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
-        <a href="https://beauty.hotpepper.jp/kr/slnH000500729/coupon/" target="_blank" rel="noopener noreferrer" class="w-full bg-gold-600 text-white text-center py-3 font-bold tracking-widest shadow-md rounded-sm">
-            ご予約はこちら
-        </a>
+        <a href="https://beauty.hotpepper.jp/kr/slnH000500729/coupon/" target="_blank" rel="noopener noreferrer" class="w-full bg-gold-600 text-white text-center py-3 font-bold tracking-widest shadow-md rounded-sm">ご予約はこちら</a>
     </div>
 
+    <!-- JS for Accordion -->
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.accordion-icon');
+            content.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
